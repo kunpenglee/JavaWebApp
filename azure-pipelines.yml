@@ -10,6 +10,10 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
